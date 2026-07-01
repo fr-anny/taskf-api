@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task | Organiza tu día</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+</head>
+
+<body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <div class="logo-icon">
+                🌸
+            </div>
+            <div>
+                <h2>Task</h2>
+                <span>Productividad inteligente</span>
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i>
+                Inicio
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-list-check"></i>
+                Mis tareas
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-chart-line"></i>
+                Progreso
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-gear"></i>
+                Configuración
+            </a>
+        </nav>
+        <div class="quote">
+            <p>
+                "Cada pequeña tarea terminada es un paso más hacia tus metas."
+            </p>
+        </div>
+    </aside>
+    <!-- CONTENIDO -->
+    <main class="main-content">
+        <!-- HEADER -->
+        <header>
+            <div>
+                <h1>¡Hola!</h1>
+                <p>
+                    Organiza tu día y mantén el enfoque.
+                </p>
+            </div>
+        </header>
+        <!-- TARJETAS -->
+        <section class="stats">
+            <article class="stat-card">
+                <div>
+                    <h3>Pendientes</h3>
+                    <span id="pending-count">0</span>
+                </div>
+                <i class="fa-solid fa-list-check"></i>
+            </article>
+            <article class="stat-card">
+                <div>
+                    <h3>Completadas</h3>
+                    <span id="completed-count">0</span>
+                </div>
+                <i class="fa-solid fa-circle-check"></i>
+            </article>
+            <article class="stat-card">
+                <div>
+                    <h3>Total</h3>
+                    <span id="total-count">0</span>
+                </div>
+                <i class="fa-solid fa-layer-group"></i>
+            </article>
+        </section>
+        <!-- GRID -->
+        <section class="content-grid">
+            <!-- FORMULARIO -->
+            <section class="card">
+                <div class="card-title">
+                    <h2>
+                        <i class="fa-solid fa-plus"></i>
+                        Nueva tarea
+                    </h2>
+                </div>
+                <form id="task-form">
+                    <label for="titulo">
+                        Título
+                    </label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="¿Qué quieres hacer hoy?"
+                        required>
+                    <label for="descripcion">
+                        Descripción
+                    </label>
+                    <textarea
+                        id="descripcion"
+                        placeholder="Escribe algunos detalles..."></textarea>
+                    <button type="submit">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Guardar tarea
+                    </button>
+                </form>
+            </section>
+            <!-- LISTA -->
+            <section class="card">
+                <div class="card-title">
+                    <h2>
+                        <i class="fa-solid fa-list-check"></i>
+                        Mis tareas
+                    </h2>
+                </div>
+                <div
+                    id="tasks-container"
+                    class="tasks-list">
+                    <!-- JavaScript insertará aquí las tareas -->
+                </div>
+            </section>
+        </section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
